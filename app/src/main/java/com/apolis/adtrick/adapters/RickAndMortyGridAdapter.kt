@@ -11,7 +11,7 @@ import com.apolis.adtrick.models.RickAndMortyCharacters
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.rick_and_morty_adapter.view.*
 
-class RickAndMortyAdapter(val context: Context, var results: List<RickAndMortyCharacters>): RecyclerView.Adapter<RickAndMortyAdapter.ViewHolder>() {
+class RickAndMortyGridAdapter(val context: Context, val results: List<RickAndMortyCharacters>): RecyclerView.Adapter<RickAndMortyGridAdapter.ViewHolder>() {
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         fun bindView(characters: RickAndMortyCharacters){
             itemView.name.text = characters.name
@@ -29,18 +29,16 @@ class RickAndMortyAdapter(val context: Context, var results: List<RickAndMortyCh
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.rick_and_morty_adapter, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.rick_and_morty_grid_adapter, parent, false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val characters = results[position]
         holder.bindView(characters)
-
     }
 
     override fun getItemCount(): Int {
-       return results.size
+        return results.size
     }
-
 }

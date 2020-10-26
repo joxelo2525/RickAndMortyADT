@@ -10,6 +10,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val fragment = RickAndMortyFragment()
         val manager = supportFragmentManager
-        manager.beginTransaction().add(R.id.fragment_holder, fragment).commit()
+        manager.beginTransaction().replace(R.id.fragment_holder, fragment).commit()
     }
 }
