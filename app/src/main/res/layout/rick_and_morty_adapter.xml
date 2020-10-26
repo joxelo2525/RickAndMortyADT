@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        />
+    <TextView
+        android:id="@+id/name"
+        android:text="Name"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/status_and_species"
+            android:text="status and species"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toEndOf="@+id/image"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            app:layout_constraintLeft_toRightOf="@id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
